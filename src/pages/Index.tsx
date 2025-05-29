@@ -212,7 +212,7 @@ const Index = () => {
                     style={{ animationDelay: item.delay }}
                   >
                     <div className="flex items-center gap-3 mb-2">
-                      <item.icon className="text-violet-500 text-xl animate-pulse" />
+                      <item.icon className="text-blue-500 text-xl animate-pulse drop-shadow-md" />
                       <span className={textSecondary}>{item.label}</span>
                     </div>
                     <p className={`${textPrimary} font-semibold`}>{item.value}</p>
@@ -231,7 +231,7 @@ const Index = () => {
                     { icon: FaUser, label: 'Skin Tone', value: 'Sandal Brown' }
                   ].map((attr, index) => (
                     <div key={index} className="flex items-center gap-3 animate-fade-in" style={{ animationDelay: `${0.7 + index * 0.1}s` }}>
-                      <attr.icon className="text-violet-500 animate-pulse" />
+                      <attr.icon className="text-violet-500 animate-pulse drop-shadow-md" />
                       <span className={textSecondary}>{attr.label}:</span>
                       <span className={`${textPrimary} font-semibold`}>{attr.value}</span>
                     </div>
@@ -362,7 +362,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Connect With Me Section */}
+      {/* Connect With Me Section with Instagram Link */}
       <section className={`py-20 px-4 ${bgPrimary} transition-colors duration-500`}>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-violet-600">Connect With Me</h2>
@@ -370,7 +370,7 @@ const Index = () => {
           
           <div className="flex flex-col sm:flex-row justify-center gap-6">
             <a 
-              href="https://instagram.com" 
+              href="https://www.instagram.com/gokul_vasan_" 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-violet-500 to-blue-600 px-8 py-4 rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-white font-semibold animate-fade-in"
@@ -466,10 +466,22 @@ const Index = () => {
         </div>
       </footer>
 
-      {/* Enhanced Lightbox Modal with Navigation and Dynamic Glow */}
+      {/* Developer Credits Footer */}
+      <footer className={`py-6 px-4 ${bgSecondary} transition-colors duration-500 cursor-pointer`} onClick={() => window.open('https://dineshcreates.vercel.app/', '_blank')}>
+        <div className="max-w-6xl mx-auto text-center">
+          <p className="bg-gradient-to-r from-violet-500 via-purple-500 to-violet-600 bg-clip-text text-transparent font-semibold text-lg hover:from-violet-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105" style={{
+            filter: 'drop-shadow(0 0 8px rgba(139, 92, 246, 0.5))',
+            textShadow: '0 0 10px rgba(139, 92, 246, 0.3)'
+          }}>
+            Sprinkled with creativity & code 🪄 | Crafted by Dinesh • Freelance Creator
+          </p>
+        </div>
+      </footer>
+
+      {/* Enhanced Lightbox Modal with Larger Images */}
       {selectedImage && (
         <div className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4" onClick={closeLightbox}>
-          <div className="relative max-w-4xl max-h-full flex items-center justify-center">
+          <div className="relative max-w-6xl max-h-[90vh] w-full h-full flex items-center justify-center">
             {/* Close Button */}
             <button 
               onClick={closeLightbox}
@@ -494,7 +506,7 @@ const Index = () => {
               <FaChevronRight className="text-3xl" />
             </button>
             
-            {/* Image with Dynamic Glow */}
+            {/* Larger Image with Dynamic Glow */}
             <img 
               src={selectedImage} 
               alt="Gallery" 
