@@ -11,8 +11,8 @@ const ThemeToggle = () => {
       onClick={toggleTheme}
       className={`fixed top-6 right-6 z-50 p-4 rounded-full shadow-lg transition-all duration-500 transform hover:scale-110 ${
         isDarkMode 
-          ? 'bg-gradient-to-r from-amber-500 to-yellow-500 text-gray-900' 
-          : 'bg-gradient-to-r from-gray-800 to-gray-900 text-white'
+          ? 'bg-gradient-to-r from-blue-500 to-violet-500 text-white' 
+          : 'bg-gradient-to-r from-violet-500 to-blue-500 text-white'
       } hover:shadow-2xl`}
       aria-label="Toggle theme"
     >
