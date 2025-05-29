@@ -4,6 +4,32 @@ import { Clapperboard, Film } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import ThemeToggle from '../components/ThemeToggle';
 
+
+//import images from .src/images/
+import image1 from '../images/image1.jpg';
+import image2 from '../images/image2.jpg';
+import image3 from '../images/image3.jpg';
+import image4 from '../images/image4.jpg';
+import image5 from '../images/image5.jpg';
+import image6 from '../images/image6.jpg';
+import image7 from '../images/image7.jpg';
+import image8 from '../images/image8.jpg';
+import image9 from '../images/image9.jpg';
+import image10 from '../images/image10.jpg';
+import image11 from '../images/image11.jpg';
+import image12 from '../images/image12.jpg';
+import image14 from '../images/image14.jpg';
+import image15 from '../images/image16.jpg';
+import image16 from '../images/image17 .jpg';
+import image17 from '../images/image18.jpg';
+import image18 from '../images/image19.jpg';
+import image20 from '../images/image21.jpg';
+
+
+
+
+
+
 const Index = () => {
   const { isDarkMode } = useTheme();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -17,12 +43,7 @@ const Index = () => {
   });
 
   const galleryImages = [
-    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=400&fit=crop',
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=350&fit=crop',
-    'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&h=450&fit=crop',
-    'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=380&fit=crop',
-    'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&h=420&fit=crop',
-    'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=300&h=360&fit=crop'
+    image1,image2,image3,image4,image6,image7,image8,image9,image10,image11,image12,image15,image14,image16,image17,image18,image20,image5
   ];
 
   // Theme-based classes with blue/violet color scheme
@@ -131,13 +152,13 @@ const Index = () => {
           <div 
             className="w-1/2 h-full bg-cover bg-center"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=1200&fit=crop')`
+              backgroundImage:  `url(${image4})` 
             }}
           ></div>
           <div 
             className="w-1/2 h-full bg-cover bg-center"
             style={{
-              backgroundImage: `url('https://images.unsplash.com/photo-1500673922987-e212871fec22?w=800&h=1200&fit=crop')`
+              backgroundImage: `url(${image12})` 
             }}
           ></div>
         </div>
