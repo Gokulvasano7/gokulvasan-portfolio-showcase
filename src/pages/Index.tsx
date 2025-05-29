@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
-import { FaMapMarkerAlt, FaLanguage, FaUser, FaRuler, FaPalette, FaEye, FaInstagram, FaWhatsapp, FaEnvelope, FaPlay, FaTimes, FaGraduationCap, FaBirthdayCake, FaFilm, FaVideo, FaClapperboard } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaLanguage, FaUser, FaRuler, FaPalette, FaEye, FaInstagram, FaWhatsapp, FaEnvelope, FaPlay, FaTimes, FaGraduationCap, FaBirthdayCake, FaFilm, FaVideo } from 'react-icons/fa';
+import { Clapperboard } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 import ThemeToggle from '../components/ThemeToggle';
 
@@ -56,7 +56,7 @@ const Index = () => {
         <div className="absolute inset-0 pointer-events-none">
           <FaFilm className="absolute top-20 left-10 text-amber-400/30 text-4xl animate-bounce" style={{ animationDelay: '0s' }} />
           <FaVideo className="absolute top-40 right-20 text-amber-400/30 text-3xl animate-bounce" style={{ animationDelay: '1s' }} />
-          <FaClapperboard className="absolute bottom-40 left-20 text-amber-400/30 text-5xl animate-bounce" style={{ animationDelay: '2s' }} />
+          <Clapperboard className="absolute bottom-40 left-20 text-amber-400/30 w-12 h-12 animate-bounce" style={{ animationDelay: '2s' }} />
           <FaPlay className="absolute bottom-20 right-10 text-amber-400/30 text-3xl animate-bounce" style={{ animationDelay: '0.5s' }} />
         </div>
 
