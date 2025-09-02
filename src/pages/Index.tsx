@@ -6,24 +6,36 @@ import ThemeToggle from '../components/ThemeToggle';
 
 
 //import images from .src/images/
-import image1 from '../images/image1.jpg';
-import image2 from '../images/image2.jpg';
-import image3 from '../images/image3.jpg';
-import image4 from '../images/image4.jpg';
-import image5 from '../images/image5.jpg';
-import image6 from '../images/image6.jpg';
-import image7 from '../images/image7.jpg';
-import image8 from '../images/image8.jpg';
-import image9 from '../images/image9.jpg';
-import image10 from '../images/image10.jpg';
-import image11 from '../images/image11.jpg';
-import image12 from '../images/image12.jpg';
-import image14 from '../images/image14.jpg';
-import image15 from '../images/image16.jpg';
-import image16 from '../images/image17 .jpg';
-import image17 from '../images/image18.jpg';
-import image18 from '../images/image19.jpg';
-import image20 from '../images/image21.jpg';
+import bg from '../images/bg.png';
+import image1 from '../images/1.jpg';
+import image2 from '../images/2.jpg';
+import image3 from '../images/3.jpg';
+import image4 from '../images/4.jpg';
+import image5 from '../images/5.jpg';
+import image6 from '../images/6.jpg';
+import image7 from '../images/7.jpg';
+import image8 from '../images/8.jpg';
+import image9 from '../images/9.jpg';
+import image10 from '../images/10.jpg';
+import image11 from '../images/11.jpg';
+import image12 from '../images/12.jpg';
+import image14 from '../images/14.jpg';
+import image15 from '../images/16.jpg';
+import image16 from '../images/17.jpg';
+import image17 from '../images/18.jpg';
+import image18 from '../images/19.jpg';
+import image20 from '../images/20.jpg';
+import image21 from '../images/21.jpg';
+import image22 from '../images/22.jpg';
+import image23 from '../images/23.jpg';
+import image24 from '../images/24.jpg';
+import image25 from '../images/25.jpg';
+
+
+
+
+
+
 
 
 
@@ -43,7 +55,7 @@ const Index = () => {
   });
 
   const galleryImages = [
-    image1,image2,image3,image4,image6,image7,image8,image9,image10,image11,image12,image15,image14,image16,image17,image18,image20,image5
+    image1,image2,image3,image4,image5,image6,image7,image8,image9,image10,image11,image12,image15,image14,image16,image17,image18,image20,image21, image22,image23,image24,image25
   ];
 
   // Theme-based classes with blue/violet color scheme
@@ -130,7 +142,7 @@ const Index = () => {
       <ThemeToggle />
       <canvas ref={canvasRef} style={{ display: 'none' }} />
       
-      {/* Hero Section with Dual Background Images */}
+      {/* Hero Section with Single Background Image */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Enhanced Floating Cinema Elements */}
         <div className="absolute inset-0 pointer-events-none">
@@ -147,21 +159,13 @@ const Index = () => {
           <Film className="absolute bottom-80 right-1/4 text-blue-400/20 w-10 h-10 animate-bounce" style={{ animationDelay: '4s' }} />
         </div>
 
-        {/* Dual Background Images */}
-        <div className="absolute inset-0 flex">
-          <div 
-            className="w-1/2 h-full bg-cover bg-center"
-            style={{
-              backgroundImage:  `url(${image4})` 
-            }}
-          ></div>
-          <div 
-            className="w-1/2 h-full bg-cover bg-center"
-            style={{
-              backgroundImage: `url(${image12})` 
-            }}
-          ></div>
-        </div>
+        {/* Single Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url(${bg})`
+          }}
+        ></div>
         
         {/* Gradient Overlay */}
         <div className={`absolute inset-0 ${isDarkMode 
