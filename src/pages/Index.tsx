@@ -63,7 +63,7 @@ const Index = () => {
       const canvas = canvasRef.current;
       if (!canvas) return;
       
-      const ctx = canvas.getContext('2d');
+      const ctx = canvas.getContext('2d', { willReadFrequently: true });
       if (!ctx) return;
       
       canvas.width = img.width;
@@ -479,23 +479,50 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Merged Footer */}
       <footer className={`py-8 px-4 ${bgPrimary} border-t ${borderColor} transition-colors duration-500`}>
-        <div className="max-w-6xl mx-auto text-center">
-          <p className={textSecondary}>&copy; 2024 Gokulvasan. All rights reserved.</p>
-          <p className="text-blue-600 mt-2">Actor & Performer</p>
-        </div>
-      </footer>
+        <div className="max-w-6xl mx-auto">
+          {/* Desktop Layout - Side by Side */}
+          <div className="hidden md:flex md:justify-between md:items-center">
+            {/* Left Side - Copyright */}
+            <div className="text-left">
+              <p className={textSecondary}>&copy; 2024 Gokulvasan. All rights reserved.</p>
+            </div>
+            
+            {/* Right Side - Developer Credits */}
+            <div 
+              className="text-right cursor-pointer" 
+              onClick={() => window.open('https://dineshcreates.vercel.app/', '_blank')}
+            >
+              <p className="bg-gradient-to-r from-violet-500 via-purple-500 to-violet-600 bg-clip-text text-transparent font-semibold text-base hover:from-violet-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105" style={{
+                filter: 'drop-shadow(0 0 8px rgba(139, 92, 246, 0.5))',
+                textShadow: '0 0 10px rgba(139, 92, 246, 0.3)'
+              }}>
+                Sprinkled with creativity & code 🪄 | Crafted by Dinesh • Freelance Creator
+              </p>
+            </div>
+          </div>
 
-      {/* Developer Credits Footer */}
-      <footer className={`py-6 px-4 ${bgSecondary} transition-colors duration-500 cursor-pointer`} onClick={() => window.open('https://dineshcreates.vercel.app/', '_blank')}>
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="bg-gradient-to-r from-violet-500 via-purple-500 to-violet-600 bg-clip-text text-transparent font-semibold text-lg hover:from-violet-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105" style={{
-            filter: 'drop-shadow(0 0 8px rgba(139, 92, 246, 0.5))',
-            textShadow: '0 0 10px rgba(139, 92, 246, 0.3)'
-          }}>
-            Sprinkled with creativity & code 🪄 | Crafted by Dinesh • Freelance Creator
-          </p>
+          {/* Mobile Layout - Stacked */}
+          <div className="md:hidden text-center space-y-4">
+            {/* Copyright Section */}
+            <div>
+              <p className={textSecondary}>&copy; 2024 Gokulvasan. All rights reserved.</p>
+            </div>
+            
+            {/* Developer Credits Section */}
+            <div 
+              className="cursor-pointer" 
+              onClick={() => window.open('https://dineshcreates.vercel.app/', '_blank')}
+            >
+              <p className="bg-gradient-to-r from-violet-500 via-purple-500 to-violet-600 bg-clip-text text-transparent font-semibold text-sm hover:from-violet-400 hover:to-purple-400 transition-all duration-300 transform hover:scale-105" style={{
+                filter: 'drop-shadow(0 0 8px rgba(139, 92, 246, 0.5))',
+                textShadow: '0 0 10px rgba(139, 92, 246, 0.3)'
+              }}>
+                Sprinkled with creativity & code 🪄 | Crafted by Dinesh • Freelance Creator
+              </p>
+            </div>
+          </div>
         </div>
       </footer>
 
