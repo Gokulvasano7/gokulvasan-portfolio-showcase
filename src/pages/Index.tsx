@@ -105,7 +105,7 @@ const Index = () => {
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = `Hello! I'm ${formData.name}. Email: ${formData.email}. Message: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/+919876543210?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/+919659220236?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
