@@ -184,7 +184,7 @@ const Index = () => {
         
         {/* Content */}
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent animate-pulse">
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-violet-600 bg-clip-text text-transparent animate-pulse" style={{ fontFamily: '"Playfair Display", serif' }}>
             Gokulvasan
           </h1>
           <p className={`text-2xl md:text-3xl mb-4 ${textSecondary} animate-fade-in`} style={{ animationDelay: '0.5s' }}>
