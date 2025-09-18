@@ -106,7 +106,7 @@ const Index = () => {
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = `Hello! I'm ${formData.name}. Email: ${formData.email}. Message: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/+919876543210?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/+919659220236?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -413,7 +413,7 @@ const Index = () => {
               <span>Follow on Instagram</span>
             </a>
             <a 
-              href="https://wa.me/+919876543210?text=Hello%20Gokulvasan!%20I%20would%20like%20to%20discuss%20a%20potential%20collaboration." 
+              href="https://wa.me/+919659220236?text=Hello%20Gokulvasan!%20I%20would%20like%20to%20discuss%20a%20potential%20collaboration." 
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-gradient-to-r from-green-500 to-green-600 px-8 py-4 rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 text-white font-semibold animate-fade-in"
