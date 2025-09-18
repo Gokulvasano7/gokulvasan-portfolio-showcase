@@ -7,6 +7,7 @@ import ThemeToggle from '../components/ThemeToggle';
 
 //import images from .src/images/
 import bg from '../images/bg.png';
+import mobileBg from '../images/mobile-bg.png';
 import image1 from '../images/1.jpg';
 import image2 from '../images/2.jpg';
 import image3 from '../images/3.jpg';
@@ -159,11 +160,19 @@ const Index = () => {
           <Film className="absolute bottom-80 right-1/4 text-blue-400/20 w-10 h-10 animate-bounce" style={{ animationDelay: '4s' }} />
         </div>
 
-        {/* Single Background Image */}
+        {/* Desktop Background Image - Hidden on mobile */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block"
           style={{
             backgroundImage: `url(${bg})`
+          }}
+        ></div>
+        
+        {/* Mobile Background Image - Only visible on mobile */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
+          style={{
+            backgroundImage: `url(${mobileBg})`
           }}
         ></div>
         
